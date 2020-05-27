@@ -1,0 +1,18 @@
+<div class="img">
+    <img class="img" src="assets/img/logo.png">
+</div>
+<p></p><p></p>
+
+<div class="f">
+<form #c="ngForm" (ngSubmit)="onconection(c.value)">
+    
+    <input type="text" name="login"ngModel placeholder="Identifiant"> <p></p> <p></p><p></p>
+    
+    <input type="password" name="motDePasse"ngModel placeholder="Mot de passe"><p></p>
+    <button class="b">se connecter</button>
+</form><p></p>
+<button class="b" (click)="inscrire()">s'inscrire</button>
+<div *ngIf="mode">
+    <p class="logIncorrect">Login ou Mot de passe incorrects </p>
+</div>
+</div>

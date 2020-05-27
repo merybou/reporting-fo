@@ -1,0 +1,12 @@
+<div id="grid">
+  <dx-data-grid id="grid-container" [dataSource]="dataSource" [repaintChangesOnly]="true" [showBorders]="true">
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-editing mode="cell" refreshMode="reshape" [allowUpdating]="true" [allowDeleting]="true" [allowAdding]="true">
+    </dxo-editing>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxi-column dataField="nom" caption="Taches"></dxi-column>
+    <dxi-column dataField="dateDebut" caption="Date de début" dataType="date" dateFormat='dd/MM/yyyy'></dxi-column>
+    <dxi-column dataField="dateFin" dataType="date"></dxi-column>
+    <dxi-column dataField="ctp"></dxi-column>
+  </dx-data-grid>
+</div>

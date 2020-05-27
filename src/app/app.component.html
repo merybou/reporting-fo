@@ -1,26 +1,11 @@
-<div *ngIf="personne">
-    Bonjour {{personne.prenom}} {{personne.nom}}
-</div>
+<html>
 
-<button (click)="onClickSurBouton()">afficher</button>
-{{message}}
+<body>
+ 
+ 
 
-<div *ngIf="taches">
-    <table>
-        <tr>
-            <th></th>
-            <th>Taches</th>
-            <th>Date début</th>
-            <th>Date fin</th>
-            <th>CTP</th>
-          </tr>
+  <router-outlet>
+  </router-outlet>
 
-          <tr *ngFor="let tache of taches; let i = index">
-            <td>{{i+1}}</td>
-            <td>{{tache.nom}}</td>
-            <td>{{tache.dateDebut | date:'dd/MM/yyyy'}}</td>
-            <td>{{tache.dateFin | date:'dd/MM/yyyy'}}</td>
-            <td>{{tache.ctp}}</td>
-          </tr>
-    </table>
-</div>
+</body>
+</html>

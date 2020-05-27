@@ -1,0 +1,22 @@
+<nav>
+  <ul>
+    <li routerLink="/taches" class="btn btn-primary">Taches</li>
+    <li routerLink="/projet" class="btn btn-primary">projet</li>
+  </ul>
+</nav>
+
+<form [formGroup]="formulaire">
+  <select formControlName="listeDeroulanteProjets" id="projets" (change)="onChangeProjet()">
+    <option *ngFor="let projet of projets; let i = index" [ngValue]='projet'>{{ projet.libelle }}</option>
+  </select>
+
+  <div>
+    <select formControlName="listeDeroulanteSotps">
+      <option *ngFor="let sotp of sotps">{{ sotp.libelle }}</option>
+    </select>
+  </div>
+
+
+  <!--<app-list-taches [taches]=taches></app-list-taches>-->
+  <app-list-taches></app-list-taches>
+</form>

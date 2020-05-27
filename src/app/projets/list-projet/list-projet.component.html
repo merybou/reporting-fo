@@ -1,0 +1,14 @@
+<div id="grid">
+    <dx-data-grid id="grid-container" [dataSource]="dataSource" [repaintChangesOnly]="true" [showBorders]="true">
+      <dxo-paging [pageSize]="10"></dxo-paging>
+      <dxo-editing mode="cell" refreshMode="reshape" [allowUpdating]="true" [allowDeleting]="true" [allowAdding]="true">
+      </dxo-editing>
+      <dxo-filter-row [visible]="true"></dxo-filter-row>
+      <dxi-column dataField="client" caption="Nom client"></dxi-column>
+      <dxi-column dataField="numero" caption="OTP"></dxi-column>
+      <dxi-column dataField="libelle" caption="Projets"></dxi-column>
+      <dxi-column dataField="dateDebut" caption="Date de début" dataType="date" dateFormat='dd/MM/yyyy'></dxi-column>
+      <dxi-column dataField="dateFin" caption="Date de fin" dataType="date"></dxi-column>
+      <dxi-column dataField="chefProjet.nom"caption="Chef de projet"></dxi-column>
+    </dx-data-grid>
+  </div>
